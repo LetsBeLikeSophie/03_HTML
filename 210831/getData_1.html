@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>getData Form Test</title>
+</head>
+<body>
+<!-- 
+http://localhost:8088/testWeb/html_1/getData_1.html?mname=&addr=
+http://localhost:8088/testWeb/html_1/getData_1.html?mname=1111&addr=2222
+
+action : 	URL : Specifies where to send the form-data when a form is submitted
+	현재 클라이언트 html의  form 태그에 바인딩 된 데이터를 가지고 
+	웹서버의 특정 페이지 url을 적는 속성 값이다. 
+
+method : 	get
+			post	
+			Specifies the HTTP method to use when sending form-data	
+
+	클라이언트 브라우저에서 웹서버의 특정 페이지로 데이터를 전송할 때 데이터를 보내는 방식
+	데이터 : mname=1111&addr=2222
+	get : http 프로토콜의 헤더에 넣어서  보내시오 : 브라우저 로케이션에 영역 action url이 보이고 데이터 보인다. 
+			http://localhost:8088/testWeb/jsp/getDate.jsp?mname=111&maddr=333
+			
+	post : http 프로토콜의 body에 넣어서  보내시오 : 브라우저 로케이션에 영역 action url만 보인다. 
+			http://localhost:8088/testWeb/jsp/getDate.jsp
+
+enctype	: 	application/x-www-form-urlencoded
+			multipart/form-data
+			text/plain	
+			Specifies how the form-data should be encoded 
+			when submitting it to the server (only for method="post")
+			
+		데이터 : mname=1111&addr=2222 를 인코딩(숫자하고 문자를 제외한 2바이트 이상 사용하는 문자)하는 방식 
+			application/x-www-form-urlencoded : default : 일반적으로 데이터를 보낼 때 
+				데이터를 mname=1111&addr=2222 형식으로 보낼 때 (데이터를 key=value&key=value)
+				이 형식을 퀴리 스트링 : Query String 
+				mnaem=1A이a희진   23천재야444&maddr=1111
+				http://localhost:8088/testWeb/jsp/getDate.jsp
+				?
+				mname=1A%C0%CCa%C8%F1%C1%F8+++23%C3%B5%C0%E7%BE%DF444
+				&
+				maddr=1111
+			multipart/form-data : 파일 데이터를 보낼 때 사용하는 인코딩 방식 
+				파일 업로드할 때 만 사용한다. 
+				method 는 꼭 POST 방식이어야 한다.
+							
+input type="text" name="mname"
+input type="text" name="maddr" 	
+input type="submit" : submit() 함수 : 폼태그에 있는 데이터를 action에서 지정한 url 전송하세요 	
+input type="reset" : 폼태그 내부의 요소에 바인딩 된 데이터를 지우세요 			
+ -->
+
+<form 	id="getDataForm" name="getDateForm"
+		action="http://localhost:8088/testWeb/jsp/getDate.jsp"
+		method="GET"
+		enctype="application/x-www-form-urlencoded">
+	이름 : <input type="text" id="mname" name="mname"><br>
+	주소 : <input type="text" id="maddr" name="maddr"><br>
+	<input type="submit" value="보내기">
+	<input type="reset" value="다시">
+</form>
+
+</body>
+</html>

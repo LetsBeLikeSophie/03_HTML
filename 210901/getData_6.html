@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>getData Form Test</title>
+<script type="text/javascript">
+	alert("자바스크립트 블럭 시작 >>> : ");
+	
+	function checkAction(){
+		alert("checkAction함수  블럭 시작 >>> : ");
+		console.log("checkAction함수  블럭 시작 >>> : ");
+		
+		alert(window.document.getElementById("getDataForm_id"));
+		alert(window.document.getDataForm_name);
+		
+		alert(window.document.getElementsByTagName("input"));
+		alert(window.document.getElementsByTagName("input")[0]);
+		alert(window.document.getElementsByTagName("input")[1]);
+		
+		var a = document.getElementById("mname");
+		alert("a >>> : " + a);
+		alert("a.value >>> : " + a.value);
+		var b = document.getElementById("maddr");
+		alert("b >>> : " + b);
+		alert("b.value >>> : " + b.value);
+		
+		var f = window.document.getElementById("getDataForm_id");
+		f.action = "/testWeb/jsp/getDate.jsp";
+		f.method = "GET";
+		f.enctype = "application/x-www-form-urlencoded";
+		f.submit();
+	}
+</script>
+</head>
+<body>
+<form 	id="getDataForm_id" name="getDataForm_name">
+이름 : <input type="text" id="mname" name="mname"><br>
+주소 : <input type="text" id="maddr" name="maddr"><br>
+<!-- 
+<input type="submit" value="보내기">
+ -->
+<input type="button" value="보내기" style="Color:red" onclick="checkAction()">
+<input type="reset" value="다시" style="Color:blue">
+</form>
+<form></form>
+</body>
+</html>

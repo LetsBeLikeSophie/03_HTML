@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>getData Form Test</title>
+<!-- 자바스크립트 블럭  -->
+<script type="text/javascript">
+	alert("자바스크립트 블럭 시작 >>> : ");
+	
+	function getData(f){
+		alert("getData 함수 내부에 진입 >>> : ");
+		console.log("getData 함수 내부에 진입 >>> : ");
+		
+		alert("f >>> : " + f);
+		
+		var a = f.mname;
+		alert("a >>> : " + a);
+		alert("a.value >>> : " + a.value);
+		
+		var b = f.maddr;
+		alert("b >>> : " + b);
+		alert("b.value >>> : " + b.value);
+		
+		f.action = "/testWeb/jsp/getDate.jsp";
+		f.method = "GET";
+		f.enctype = "application/x-www-form-urlencoded";
+		f.submit();
+	}
+
+</script>
+</head>
+<body>
+<form 	id="getDataForm" name="getDataForm">
+이름 : <input type="text" id="mname" name="mname"><br>
+주소 : <input type="text" id="maddr" name="maddr"><br>
+<!-- 
+<input type="submit" value="보내기">
+ -->
+<input type="button" value="보내기" style="Color:red" onclick="getData(this.form)">
+<input type="reset" value="다시" style="Color:blue">
+</form>
+
+</body>
+</html>
