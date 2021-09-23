@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	* {
+		margin: 0 auto;
+		text-align: center;
+	}
+		
+	td {
+		padding: 5px;
+		text-align: center;
+	}
+</style>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		
+		$("#postBtn").click(function(){
+			alert("postBtn 진입 >>> : ");
+			
+			var v2 = $("#postHidden").val('U');
+			
+			$("#postForm").attr({
+				"action":"#?postHidden="+v2,
+				//"action":"#",
+				"method":"POST",
+				"enctype":"application/x-www-form-urlencoded"
+			}).submit();
+		});
+	});
+
+</script>
+</head>
+<body>
+<h3>FORM 태그 POST Submit</h3>
+<hr>
+<form id="postForm" name="postForm">
+<table border="1">
+	<tr>
+		<td colspan="2">POST 방식</td>		
+	</tr>
+	<tr>
+		<td>hidden : </td>
+		<td>
+			<input type="hidden" id="postHidden" name="postHidden">
+		</td>
+	</tr>
+	<tr>
+		<td>아이디 : </td>
+		<td>
+			<input type="text" id="postId" name="postd">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input type="button" value="post버튼" id="postBtn">
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

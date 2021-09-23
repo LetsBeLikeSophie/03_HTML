@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>cgiForm Test</title>
+<!-- 디바이스에 최적화된 크기로 출력됨 -->
+<meta name="viweport" content="width=device-width, iitail-scale=1">
+<style type="text/css">
+	div {
+			margin: 50px 0px 0px 100px;
+		}	
+</style>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){				
+		$("#jspBtn").click(function(){
+			alert("jspBtn click() 함수 진입 >>> : ");
+			console.log("jspBtn click() 함수 진입 >>> : ");
+			
+			let v1 = $("#").val();
+			alert("v1 >>> : "+ v1);
+			
+			$("#form_1_Form")
+			.attr({
+					"action":"/testKosmo/cgiForm/cgiFormJsp.jsp?isudtype="+v1,
+				    "method":"GET",
+				    "enctype":"application/x-www-form-urlencoded"	
+			       })
+			.submit();	
+		});		
+		
+		$("#jspBtn_1").click(function(){
+			alert("jspBtn_1 click() 함수 진입 >>> : ");
+			console.log("jspBtn_1 click() 함수 진입 >>> : ");
+			
+			let v1 = $("#").val();
+			alert("v1 >>> : "+ v1);
+			
+			$("#form_1_Form")
+			.attr({
+					"action":"/testKosmo/cgiForm/cgiFormJsp_1.jsp?isudtype="+v1,
+				    "method":"GET",
+				    "enctype":"application/x-www-form-urlencoded"	
+			       })
+			.submit();	
+		});		
+	});
+
+	function formTestCheck() {
+		alert("formTestCheck()함수 진입");
+		
+		//보내기 버튼을 클릭하면 action이 실행되어 /testKosmo/abc로 보내진다.
+		///testKosmo에 있는 abc어노테이션을 찾아서 실행하게 된다.
+		document.form_1_Form.action="/testKosmo/form";
+		document.form_1_Form.method="GET";
+		document.form_1_Form.enctype="application/x-www-form-urlencoded";				
+		document.form_1_Form.submit();		
+	}
+</script>
+</head>
+<body>
+<div>
+<form name="form_1_Form" id="form_1_Form">
+<table border="1">
+	
+<tr>
+	<td>이름</td>
+	<td><input type="text" name="mname" /></td>
+</tr>
+<tr>
+	<td>아이디</td>
+	<td>	
+		<input type="text" name="mid" value="아이디" />
+		<input type="button" name="midCheck" value="아이디중복확인" />
+	</td>
+</tr>
+<tr>
+	<td>패스워드</td>
+	<td>
+	<input type="text" name="mpw" />
+	</td>
+</tr>
+<tr>
+	<td>핸드폰</td>
+	<td>
+	<input type="text" name="mhp" />
+	</td>
+</tr>
+<tr>
+	<td>성별</td>
+	<td> 
+		<input type="radio" name="mgender" value="M" checked="checked" />남자
+		<input type="radio" name="mgender" value="F" /> 여자
+	</td>
+</tr>
+<tr>
+	<td>취미</td>
+	<td> 
+		<input type="checkbox" name="mhobby" value="book" />독서		      
+		<input type="checkbox" name="mhobby" value="sports" />운동
+		<input type="checkbox" name="mhobby" value="mugic" />음악감상
+		<input type="checkbox" name="mhobby" value="trable" />여행
+	</td>
+</tr>
+<tr>
+	<td>지역</td>
+	<td> 
+		<!-- drop down box -->
+		<select name="mlocal">
+			<option value="seoul">서울</option>
+			<option value="gunggido">경기도</option>
+			<option value="junju">전주</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td>소개글</td>
+	<td>
+		<textarea name="mmsg" rows="5" cols="50"></textarea>
+	</td>
+</tr>
+<tr>
+	<td colspan="2"> 
+		<!-- 
+			hidden 타입은 화면에 display 되는지 않는다.value 는 서버로 전송이 된다. 
+		-->
+		<input type="hidden" id="isudtype" name="isudtype" value="I">
+		<input type="button" value="Servlet_보내기" onclick="formTestCheck()" />
+		<input type="button" value="jsp_보내기" id="jspBtn" />
+		<input type="button" value="jsp_보내기_1" id="jspBtn_1" />
+		<input type="reset" value="취소" />
+	</td>				
+</tr>
+</table>				 		        		     
+</form>	
+</div>		
+</body>
+</html>
+
+<!-- 
+API에서 함수를 볼때
+1.static
+2.예외처리 
+3.return 
+4.데이터가 없을때 
+5.parameter확인 
+-->
