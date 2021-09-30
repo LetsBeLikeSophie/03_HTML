@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>HTML Colors</title>
+	</head>
+	<body>
+		<h1>HTML Color</h1>
+		<hr>
+		color names<br>
+		RGB values<br>
+		hexadecimal values<br>
+		HSL values (CSS3)<br>
+		
+		<h1>Color Names</h1>
+		<hr>
+		CSS 140가지 기본 color names 지원<br>
+		Red : Red<br>
+		Yellow : Yello<br>
+		Cyan : Cyan<br>
+		Blue : Blue<br>
+		Magenta : Magenta<br>
+		
+		<h1>RGB</h1>
+		<hr>
+		rgb(RED, GREEN, BLUE)<br>
+		rgb(255, 0, 0) : Red<br>
+		rgb(0, 255, 0) : Green<br>
+		rgb(0, 0, 255) : Blue<br>
+		rgb(0, 0, 0) : black<br>
+		rgb(128, 128, 128) : Gray<br>
+		rgb(255, 255, 255) : White<br>
+		
+		<h1>hexadecimal values</h1>
+		<hr>
+		#RRGGBB : 00 ~ FF<br>
+		#FF0000 : rgb(255, 0, 0) : Red<br>
+		#00FF00 : rgb(0, 255, 0) : Green<br>
+		#0000FF : rgb(0, 0, 255) : Blue<br>
+		#000000 : rgb(0, 0, 0) : black<br>
+		#808080 : rgb(128, 128, 128) : Gray<br>
+		#FFFFFF : rgb(255, 255, 255) : White<br>
+		
+		<h1>HSL Valuse</h1>
+		<hr>
+		hsl(hue, saturation, lightness)<br>
+		
+		CSS3에서 RGB색상에 대한 hue, saturation, lightness 색상값을 추가 <br>
+		hue : 색조 : 0 ~ 360 : 0 또는 360은 red, 120은 green, 240은 blue<br>
+		saturatin : 채도 : 0% ~ 100% : 0%는 회색빛, 100%는 원래의 완전한 색상<br>
+		lightness : 명도 : 0% ~ 100% : 0%는 검정색, 100%는 흰색<br>
+		background-color:hsl(120,100%, 50%) : green<br>
+		
+		<h1>HSLA, RGBA</h1>
+		<hr>
+		HSL, RGB에 ahpha(투명도)가 추가 됨<br>
+		hsla(hue, saturation, lightness, alpha)<br>
+		rgba(red, green, blue, alpha)<br>
+		<!-- background-color -->
+		<hr>
+		<h1 style="background-color:Tomato;">Tomato</h1>
+		<h1 style="background-color:Orange;">Orange</h1>
+		<h1 style="background-color:DodgerBlue;">DodgerBlue</h1>
+		<h1 style="background-color:MediumSeaGreen;">MediumSeaGreen</h1>
+		<h1 style="background-color:Gray;">Gray</h1>
+		<h1 style="background-color:SlateBlue;">SlateBlue</h1>
+		<h1 style="background-color:Violet;">Violet</h1>
+		<h1 style="background-color:LightGray;">LightGray</h1>
+		<h1 style="background-color:DodgerBlue;">Hello World</h1>
+		<p style="background-color:Tomato;">Lorem ipsum...</p> 
+		<!-- Text Color -->
+		<hr>
+		<h1 style="color:Tomato;">HelloWorld</h1>
+		<p style="color:DodgerBlue;">Loremipsum...</p>
+		<p style="color:MediumSeaGreen;">Ut wisienim...</p> 
+		<!-- Border Color -->
+		<hr>
+		<h1 style="border:2px solid Tomato;">HelloWorld</h1>
+		<h1 style="border:2px solid DodgerBlue;">HelloWorld</h1>
+		<h1 style="border:2px solid Violet;">HelloWorld</h1> 
+		<!-- Color Values -->
+		<hr>
+		<h1 style="background-color:rgb(255,99, 71);">...</h1>
+		<h1 style="background-color:#ff6347;">...</h1>
+		<h1 style="background-color:hsl(9,100%, 64%);">...</h1>
+		
+		<h1 style="background-color:rgba(255,99, 71, 0.5);">...</h1>
+		<h1 style="background-color:hsla(9,100%, 64%, 0.5);">...</h1>
+		<!-- HSL Saturation -->
+		<hr>
+		<h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+		<h1 style="background-color:hsl(0, 80%, 50%);">hsl(0, 80%, 50%)</h1>
+		<h1 style="background-color:hsl(0, 60%, 50%);">hsl(0, 60%, 50%)</h1>
+		<h1 style="background-color:hsl(0, 40%, 50%);">hsl(0, 40%, 50%)</h1>
+		<h1 style="background-color:hsl(0, 20%, 50%);">hsl(0, 20%, 50%)</h1>
+		<h1 style="background-color:hsl(0, 0%, 50%);">hsl(0, 0%, 50%)</h1>
+		<!-- HSL Lightness -->
+		<hr>
+		<h1 style="background-color:hsl(0, 100%, 0%);">hsl(0, 100%, 0%)</h1>
+		<h1 style="background-color:hsl(0, 100%, 25%);">hsl(0, 100%, 25%)</h1>
+		<h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+		<h1 style="background-color:hsl(0, 100%, 75%);">hsl(0, 100%, 75%)</h1>
+		<h1 style="background-color:hsl(0, 100%, 90%);">hsl(0, 100%, 90%)</h1>
+		<h1 style="background-color:hsl(0, 100%, 100%);">hsl(0, 100%, 100%)</h1>
+		<!-- HSL Gray test -->
+		<hr>
+		<h1 style="background-color:hsl(0, 0%, 0%);">hsl(0, 0%, 0%)</h1>
+		<h1 style="background-color:hsl(0, 0%, 24%);">hsl(0, 0%, 24%)</h1>
+		<h1 style="background-color:hsl(0, 0%, 47%);">hsl(0, 0%, 47%)</h1>
+		<h1 style="background-color:hsl(0, 0%, 71%);">hsl(0, 0%, 71%)</h1>
+		<h1 style="background-color:hsl(0, 0%, 94%);">hsl(0, 0%, 94%)</h1>
+		<h1 style="background-color:hsl(0, 0%, 100%);">hsl(0, 0%, 100%)</h1>
+		<!-- RGBA -->
+		<hr>
+		<h1 style="background-color:rgba(255, 99, 71, 0);">rgba(255, 99, 71, 0)</h1>
+		<h1 style="background-color:rgba(255, 99, 71, 0.2);">rgba(255, 99, 71, 0.2)</h1>
+		<h1 style="background-color:rgba(255, 99, 71, 0.4);">rgba(255, 99, 71, 0.4)</h1>
+		<h1 style="background-color:rgba(255, 99, 71, 0.6);">rgba(255, 99, 71, 0.6)</h1>
+		<h1 style="background-color:rgba(255, 99, 71, 0.8);">rgba(255, 99, 71, 0.8)</h1>
+		<h1 style="background-color:rgba(255, 99, 71, 1);">rgba(255, 99, 71, 1)</h1>
+		<!-- HSLA -->
+		<hr>
+		<h1 style="background-color:hsla(9, 100%, 64%, 0);">hsla(9, 100%, 64%, 0)</h1>
+		<h1 style="background-color:hsla(9, 100%, 64%, 0.2);">hsla(9, 100%, 64%, 0.2)</h1>
+		<h1 style="background-color:hsla(9, 100%, 64%, 0.4);">hsla(9, 100%, 64%, 0.4)</h1>
+		<h1 style="background-color:hsla(9, 100%, 64%, 0.6);">hsla(9, 100%, 64%, 0.6)</h1>
+		<h1 style="background-color:hsla(9, 100%, 64%, 0.8);">hsla(9, 100%, 64%, 0.8)</h1>
+		<h1 style="background-color:hsla(9, 100%, 64%, 1);">hsla(9, 100%, 64%, 1)</h1>
+	</body>
+</html>
