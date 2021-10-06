@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>01_json.html</title>
+<script type="text/javascript">
+	/*
+		자바스크립트 객체 : 자바스크립트 엔진 메모리에 존재하는 데이터 구조
+		JSON : 객체의 내용을 기술하기 위한 TXT 파일(문자열 파일)이다.
+		             확장자가 .json 인 문자열 파일이다. 
+			      자바스크립트 객체 문법과 동일하다.	             
+		
+		자바스크립트 객체는 : Object 로 본다 .
+						브라우저에서 사용을 할 수 있다. 
+		JSON :  문자열로 본다. 무조건 스트링으로 본다.
+				브라우저에서 JSON 문자열을 읽어 주지를 못한다.
+				자바스크립트에서 JSON을 사용하려면 
+				문자열에서 자바스크립트 객체로 변환 해야 한다.   
+				
+		
+		1. ju : 자바스크립트 객체이다. 
+		2. ju_1 : JSON 문자열이다. 
+				  ju 자바스크립트 객체를 JSON.stringify() 함수로 
+				  JSON 문자열로 변환 했다.
+		3. ju_2 : 자바스크립트 객체이다. 
+				  ju_1 JSON 문자열을 JSON.parse() 함수로 
+				    자바스크립트 객체로 변환 했다.
+	*/	
+	
+	// 자바스크립트 객체로 ju 선언하고 
+	// {"name":"김상진", "age":29, "gender":"남자", "visual":"멋짐"}; 초기화 한다. 
+	var ju = {
+				"name" : "김상진"
+			   ,"age" : 29
+			   ,"gender" : "남자"
+			   ,"visual" : "멋짐"
+			};
+	
+	alert("ju >>> : " + ju);
+	alert("typeof(ju) >>> : " + typeof(ju));
+	document.write("<h1> ju.name >>> : " + ju.name +"</h1>");
+	document.write("<h1> ju.age >>> : " + ju.age +"</h1>");
+	document.write("<h1> ju.gender >>> : " + ju.gender +"</h1>");
+	document.write("<h1> ju.visual >>> : " + ju.visual +"</h1>");
+	
+	// ju 자바스크립트 객체를 JSON String 형태로 변환한다.
+	// JSON String 형태로 변환되면 브라우저에서 사용할 수가 없다. 
+	var ju_1 = JSON.stringify(ju);	
+	alert("typeof(ju_1) >>> : " + typeof(ju_1));	
+	alert("ju_1 >>> : " + ju_1);
+	console.log("ju_1" + ju_1);	
+	document.write("<h3> ju_1.name >>> : " + ju_1.name +"</h3>");	
+	
+	// ju_1 JSON String 문자열을 ju_2 자바스크립트 객체로 변환한다.
+	// 브라우저에서 사용이 가능하다. 
+	var ju_2 = JSON.parse(ju_1);
+	alert("ju_2 >>> : " + ju_2);
+	alert("typeof(ju_2) >>> : " + typeof(ju_2));
+	document.write("<h3> ju_2.name >>> : " + ju_2.name +"</h3>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
