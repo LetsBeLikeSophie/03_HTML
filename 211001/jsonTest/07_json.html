@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>eval</title>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		alert(">>");
+		
+		var bool = false;
+		alert("bool >>> : " + bool);
+		alert("typeof(bool) >>> : " + typeof(bool));
+		if (!bool){
+			console.log("bool >>> : " + bool);
+		}
+		
+		var bool_1 = "false";
+		alert("bool_1 >>> : " + bool_1);
+		alert("typeof(bool_1) >>> : " + typeof(bool_1));
+		
+		var evalBool = eval(bool_1);
+		alert("evalBool >>> : " + evalBool);
+		alert("typeof(evalBool) >>> : " + typeof(evalBool));
+		if (!evalBool){
+			console.log("evalBool >>> : " + evalBool);
+		}		
+	});
+</script>
+</head>
+<body>
+<h3>eval() 함수</h3>
+<hr>
+</body>
+</html>

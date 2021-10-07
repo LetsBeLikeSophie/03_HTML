@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>prop</title>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		alert(">>");
+		
+		var goLink = $('.link');
+		alert(goLink.attr('href'));
+			console.log(goLink.attr('href'));
+		alert(goLink.prop('href'));
+			console.log(goLink.prop('href'));
+		
+		
+		var checkbox = $('#chk');
+		alert(checkbox.attr('checked'));
+			console.log(checkbox.attr('checked'));
+		alert(checkbox.prop('checked'));
+			console.log(checkbox.prop('checked'));
+	});
+</script>
+</head>
+<body>
+<h3>attr():html vs prop():자바스크립트</h3>
+<hr>
+<p><a href="#none" class="link">버튼</a></p>
+<p><input type="checkbox" name="chk" id="chk" checked="checked"></p>
+</body>
+</html>

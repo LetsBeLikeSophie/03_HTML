@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>ASYNC FALSE</title>
+<!-- 
+
+Ajax 동기 방식 구현 방법
+async, await 이용 : ECMAScript 2017 표준 
+--------------------------------------
+1. ajax로 가져올 데이터를 별도의 함수로 만듭니다.
+2. 그 함수의 리턴은 ajax 자체입니다.
+3. 위에서 만든 함수를 호출하는 함수에 async 키워드를 붙여서 작성합니다.
+4. 3의 함수에서 ajax용 함수를 호출할 때 await 키워드를 붙여서 동작 완료를 기다리게 합니다.
+5. ajax 동작이 완료된 결과를 다른 변수에 담아서 활용합니다.
+
+jQuery 1.8 이상부터는 
+ajax 호출을 동기적(async: false)으로 처리하면 에러가 난다. 
+ 
+ -->
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+	
+		$('#button').click(function(){
+			alert("button 클릭 진입 >>> : ");
+			syncGetData();			
+		});
+		
+		async function syncGetData(){
+			
+			let mydata = '';
+			console.log('start >>> : ');
+			
+			var vv = $('#id').val();
+			
+			mydata = await ajaxGetData(vv);						
+			alert("리턴 데이터 >>> : " + mydata);
+			
+			
+			$('#ajaxResData').html("화면에 리턴 데이터 출력 : "  + mydata);
+			console.log("콘솔에 리턴 데이터 출력 : " + mydata);
+			console.log('end >>> : ');
+		}
+		
+		function ajaxGetData(myval){
+			
+			var sendURL = "data1.jsp";
+			
+			var sendDATA = {id: myval}
+			
+			return $.ajax({
+				
+				type: "GET"
+			   ,url: sendURL
+			   ,data: sendDATA
+			   
+			});
+		}			
+	});
+
+
+</script>
+</head>
+<body>
+<form id="frm">			
+	<label>아이디</label><input name="id" id="id">
+	<input id="button" type="button" value="버튼">			
+</form>
+<div id="ajaxResData">리턴 데이터</div>	
+</body>
+</html>
