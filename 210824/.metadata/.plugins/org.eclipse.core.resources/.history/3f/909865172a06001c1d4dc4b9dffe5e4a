@@ -1,0 +1,10 @@
+package com.kosmo.csi.board.service;
+
+public class CsiBoardServiceImpl {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

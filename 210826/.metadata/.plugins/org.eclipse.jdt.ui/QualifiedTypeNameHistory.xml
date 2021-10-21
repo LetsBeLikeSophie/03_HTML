@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.kosmo.common.CsiMemberChabun"/>
+<fullyQualifiedTypeName name="com.kosmo.csi.member.service.CsiMemberService"/>
+<fullyQualifiedTypeName name="com.kosmo.csi.member.vo.CsiMemberVO"/>
+<fullyQualifiedTypeName name="com.kosmo.csi.member.service.CsiMemberServiceImpl"/>
+<fullyQualifiedTypeName name="com.kosmo.csi.board.dao.CsiBoardDAO"/>
+<fullyQualifiedTypeName name="com.kosmo.csi.board.dao.CsiBoardDAOImpl"/>
+<fullyQualifiedTypeName name="com.kosmo.common.CodeUtil"/>
+<fullyQualifiedTypeName name="com.kosmo.csi.board.service.CsiBoardServiceImpl"/>
+<fullyQualifiedTypeName name="com.kosmo.common.CsiBoardChabun"/>
+<fullyQualifiedTypeName name="com.kosmo.csi.board.scr.CsiBoard"/>
+<fullyQualifiedTypeName name="com.kosmo.csi.board.sql.CsiBoardSqlMap"/>
+<fullyQualifiedTypeName name="com.kosmo.csi.login.sql.CsiLoginQueryMap"/>
+<fullyQualifiedTypeName name="com.kosmo.csi.member.sql.CsiMemberSqlMap"/>
+<fullyQualifiedTypeName name="com.kosmo.csi.board.service.CsiBoardService"/>
+<fullyQualifiedTypeName name="com.kosmo.csi.board.vo.CsiBoardVO"/>
+</qualifiedTypeNameHistroy>

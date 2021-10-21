@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\00.KOSMO93\10.JExam\el_java_work\javaCsi\src\com\kosmo"/>
+			<item value="C:\00.KOSMO93\10.JExam\el_java_work\javaCsi\src"/>
+			<item value="C:\Users\kosmo\Desktop\210824수업후member끝\javaCsi\src"/>
+		</list>
+	</section>
+</section>

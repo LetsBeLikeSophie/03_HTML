@@ -1,0 +1,73 @@
+package com.kosmo.csi.board.service;
+
+import java.util.ArrayList;
+
+import a.b.c.kosmo.board.dao.CsiBoardDAO;
+import a.b.c.kosmo.board.dao.CsiBoardDAOImpl;
+import a.b.c.kosmo.board.vo.CsiBoardVO;
+
+public class CsiBoardServiceImpl implements CsiBoardService {
+
+	@Override
+	public ArrayList<CsiBoardVO> cboardSelectAll() {
+		
+		System.out.println("CsiBoardServiceImpl hboardSelectAll() 함수 진입 >>> : ");
+		
+		CsiBoardDAO cdao = new CsiBoardDAOImpl();		
+		return cdao.hboardSelectAll();
+	}
+
+	@Override
+	public ArrayList<CsiBoardVO> hboardSelect(CsiBoardVO hvo) {
+		
+		System.out.println("CsiBoardServiceImpl hboardSelect() 함수 진입 >>> : ");
+		
+		CsiBoardDAO cdao = new CsiBoardDAOImpl();		
+		return cdao.hboardSelect(hvo);
+	}
+
+	@Override
+	public int hboardInsert(CsiBoardVO hvo) {
+		
+		System.out.println("CsiBoardServiceImpl hboardInsert() 함수 진입 >>> : ");
+		
+		CsiBoardDAO cdao = new CsiBoardDAOImpl();		
+		return cdao.hboardInsert(hvo);
+	}
+
+	@Override
+	public int hboardUpdate(CsiBoardVO hvo) {
+		
+		System.out.println("CsiBoardServiceImpl hboardUpdate() 함수 진입 >>> : ");
+		
+		CsiBoardDAO cdao = new CsiBoardDAOImpl();		
+		return cdao.hboardUpdate(hvo);
+	}
+
+	@Override
+	public int hboardDelete(CsiBoardVO hvo) {
+		
+		System.out.println("CsiBoardServiceImpl hboardDelete() 함수 진입 >>> : ");
+		
+		CsiBoardDAO cdao = new CsiBoardDAOImpl();		
+		return cdao.hboardDelete(hvo);
+	}
+
+	@Override
+	public ArrayList<CsiBoardVO> hboardSelectSubject(CsiBoardVO hvo) {
+		
+		System.out.println("CsiBoardServiceImpl hboardSelectSubject() 함수 진입 >>> : ");
+		
+		CsiBoardDAO cdao = new CsiBoardDAOImpl();		
+		return cdao.hboardSelectSubject(hvo);
+	}
+
+	@Override
+	public ArrayList<CsiBoardVO> hboardSelectWriter(CsiBoardVO hvo) {
+		
+		System.out.println("CsiBoardServiceImpl hboardSelectWriter() 함수 진입 >>> : ");
+		
+		CsiBoardDAO cdao = new CsiBoardDAOImpl();		
+		return cdao.hboardSelectWriter(hvo);
+	}
+}
